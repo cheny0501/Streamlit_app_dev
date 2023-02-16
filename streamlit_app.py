@@ -87,7 +87,7 @@ ages = [
     "Age >64",
 ]
 
-heatmap = alt.Chart(subset).mark_rect().encode(
+chart = alt.Chart(subset).mark_rect().encode(
     x=alt.X("Age", sort=ages),
     y=alt.Y("Country"),
     color=alt.Color("Rate", scale=alt.Scale(type='log',domain=(0.01,1000),clamp=True), legend=alt.Legend(title="Mortality rate per 100k")),
